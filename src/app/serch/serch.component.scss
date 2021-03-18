@@ -1,0 +1,84 @@
+.search-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    .input-field {
+        width: 100%;
+        height: 25px;
+        display: block;
+        align-self:flex-start;
+        outline: none;
+        border: none;
+        background-color: linen;
+        border-radius: 5px;
+        color: darkslategray;
+        padding: 5px;
+        font-size: 18px;
+    }
+    .paginator {
+        align-self: flex-end;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 10px;
+        .paginator-btn {
+            display: inline-block;
+            color: darkslateblue;
+            cursor: pointer;
+            &:hover {
+                color:red;
+            }
+        }
+        .paginator-display {
+            display: inline-block;
+            margin-top: 2px;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-weight: bold;
+            color: green;
+        }
+    }
+}
+
+.spiner {
+    display: flex;
+    justify-content: center;
+}
+.images-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+    .card {
+        width: 300px;
+        border: 1px solid blue;
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .image {
+            height: 170px;
+            max-width: 300px;
+        }
+        .btn {
+            margin-top: 5px;
+            height: 25px;
+            border: none;
+            outline: none;
+            background-color: darkblue;
+            border-radius: 5px;
+            color: white;
+            cursor:pointer;
+            &:hover {
+                color:yellow;
+            }
+        }
+        .title {
+            text-align: center;
+        }
+        .liked-icon {
+            color:red;
+        }
+    }
+}

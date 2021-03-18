@@ -1,0 +1,22 @@
+    <div class="search-panel">
+        
+            <input type="text" (input)=letsSearch()
+               placeholder="Search..." [(ngModel)]='searchValue' class="input-field">
+       
+        <div class="paginator">
+            <span class="paginator-btn" (click)="getNextPage (-1)"><mat-icon>arrow_back_ios</mat-icon></span>
+            <span class="paginator-display">Page {{flickrService.currentPage}} of {{flickrService.pages}}</span>
+            <span class="paginator-btn" (click)="getNextPage (1)"><mat-icon>arrow_forward_ios</mat-icon></span>
+        </div>
+    </div>
+
+    <div class="spiner" *ngIf="showSpiner"><mat-spinner></mat-spinner></div>
+    <div class="images-wrapper" *ngIf="isDataReady">
+        <div *ngFor='let image of flickrService.imagesList' class="card">
+            <img src="{{image.url}}" alt="image" class="image">
+            <mat-icon  *ngIf="image.liked" class="liked-icon">favorite</mat-icon>
+            <button *ngIf="!image.liked" class="btn" (click)="addToBookmark(image)">Add to bookmarks</button>
+            <p class="title">{{image.tag}}</p>
+        </div>
+    </div>
+    <div *ngIf="!isDataReady">No images here. Would you try to search for anything else?</div>

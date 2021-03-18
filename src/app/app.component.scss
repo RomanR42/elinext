@@ -1,0 +1,37 @@
+.header, .footer {
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background: lightgray;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main {
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    
+    .aside {
+        width: 125px;
+        background: lightskyblue;
+        padding: 10px;
+        .active {
+            color:red;
+        }
+
+        .link-item {
+            font-size:35px;
+            margin: 10px;
+            &:hover {
+                color:yellow;
+            }
+        }
+        .link-wrapper {
+            text-align: center;
+        }
+    }
+    
+}
